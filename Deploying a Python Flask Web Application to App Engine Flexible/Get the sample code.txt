@@ -1,0 +1,8 @@
+
+1. In Cloud Shell on the command-line, run the following command to clone the Github repository:
+
+"git clone https://github.com/Capstone-Project-B21-CAP0113/ml-tf.git"
+
+2. Change directory into :
+
+"cd python-docs-samples/codelabs/flex_and_vision"
