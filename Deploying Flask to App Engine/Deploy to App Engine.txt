@@ -1,0 +1,31 @@
+Deploy to App Engine
+
+1. Modify app.yaml
+
+"nano app.yaml"
+
+2. Replace cloud storage with your cloud storage bucket name and save
+
+" 
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+
+runtime_config:
+    python_version: 3
+
+env_variables:
+    CLOUD_STORAGE_BUCKET: <your-cloud-storage-bucket>
+"
+
+3. Update your cloud build timeout
+
+"gcloud config set app/cloud_build_timeout 1000"
+
+4. Deploy app to App Engine
+
+"gcloud app deploy"
+
+5. Open app with web browser
+
+"https://<PROJECT_ID>.appspot.com"
