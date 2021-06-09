@@ -1,0 +1,15 @@
+Creating an App Engine App and Storage Bucket
+
+1. Create App Engine instance
+
+"gcloud app create"
+
+2. Select region
+
+3. Set the environment variable CLOUD_STORAGE_BUCKET equal to the name of your PROJECT_ID.
+
+"export CLOUD_STORAGE_BUCKET=${PROJECT_ID}"
+
+4. Create a bucket
+
+"gsutil mb gs://${PROJECT_ID}"
