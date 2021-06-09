@@ -1,0 +1,25 @@
+Authenticate API Requests
+
+1. Set an environment variable for [YOUR_PROJECT_ID], replacing [YOUR_PROJECT_ID] with your own project ID:
+
+"export PROJECT_ID=[YOUR_PROJECT_ID]"
+
+2. Create a Service Account to access the Google Cloud APIs when testing locally:
+
+"gcloud iam service-accounts create adminkopi \
+  --display-name "Admin KoPi Service Account""
+
+3. Give your newly created Service Account appropriate permissions:
+
+"gcloud projects add-iam-policy-binding ${PROJECT_ID} \
+--member serviceAccount:admmin@${PROJECT_ID}.iam.gserviceaccount.com \
+--role roles/owner"
+
+4. After creating your Service Account, create a Service Account key:
+
+"gcloud iam service-accounts keys create ~/key.json \
+--iam-account adminkopi@${PROJECT_ID}.iam.gserviceaccount.com"
+
+5. Using the absolute path of the generated key, set an environment variable for your service account key:
+
+"export GOOGLE_APPLICATION_CREDENTIALS="/home/${USER}/key.json""
