@@ -1,0 +1,6 @@
+To Running Application
+
+1. "python main.py"
+
+2. In cloud shell, click on web preview icon and click "Preview on port 8080".
+
