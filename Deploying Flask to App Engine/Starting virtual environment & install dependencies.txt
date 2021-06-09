@@ -1,0 +1,13 @@
+Starting Virtual Environment & Installing Dependencies
+
+1. Create an isolated Python 3 environment
+
+"virtualenv -p python3 env"
+
+2. Enter newly created virtualenv named env
+
+"source env/bin/activate"
+
+3. Use pip to install dependencies for your project from the requirements.txt file
+
+"pip install -r requirements.txt"
