@@ -1,3 +1,4 @@
+Get the sample code
 
 1. In Cloud Shell on the command-line, run the following command to clone the Github repository:
 
